@@ -1,10 +1,9 @@
 def run(instructargs):
 
-    #####################################
     instructargs["add_cluster"] = False
     instructargs["add_instance"] = False
+
     stack = newStack(instructargs)
-    #####################################
 
     stack.parse.add_required(key="size",default="t2.micro")
     stack.parse.add_required(key="disksize",default=50)
@@ -114,3 +113,25 @@ def example():
     tags = None
     comments = None
     '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

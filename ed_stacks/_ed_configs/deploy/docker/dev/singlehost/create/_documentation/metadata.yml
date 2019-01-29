@@ -1,0 +1,12 @@
+label: single_dockerhost
+desc: The stack creates a single dockerhost for deployment.
+version: 1.0.1
+categories: 
+   - aws
+   - cloud
+   - public_cloud
+tags:
+   - callback
+   - ed_core
+   - ed_saas
+   - ed

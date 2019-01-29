@@ -1,8 +1,4 @@
 def default():
-    
-    return action()
-
-def action():
 
     task = {}
     env_vars = []
@@ -16,4 +12,49 @@ def action():
                        }
 
     return task
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

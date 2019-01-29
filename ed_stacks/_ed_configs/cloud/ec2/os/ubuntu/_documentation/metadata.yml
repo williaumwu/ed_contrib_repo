@@ -1,6 +1,6 @@
-name: ec2_ubuntu_server
+label: ec2_ubuntu_server
 desc: Create Ec2 Ubuntu server
-version: 01.0.0
+version: 1.0.1
 categories: 
    - aws
    - cloud

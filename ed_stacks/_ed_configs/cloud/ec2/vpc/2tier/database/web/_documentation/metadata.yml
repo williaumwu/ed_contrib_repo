@@ -1,6 +1,6 @@
-name: aws_vpc_2tier
+label: aws_vpc_2tier
 desc: The stack that creates a VPC on AWS with 2 tier security groups - database and web.
-version: 01.0.0
+version: 1.0.1
 categories: 
    - aws
    - cloud

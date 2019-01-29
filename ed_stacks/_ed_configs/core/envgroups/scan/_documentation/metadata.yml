@@ -1,0 +1,11 @@
+label: create_env_groups
+desc: Scan and create EnvGroups
+version: 1.0.1
+categories: 
+   - ed_scan
+   - ed_saas
+tags:
+   - ed_scan
+   - callback
+   - ed_saas
+   - ed
