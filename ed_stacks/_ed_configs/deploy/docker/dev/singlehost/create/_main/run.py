@@ -11,9 +11,9 @@ def run(instructargs):
     stack.parse.add_required(key="ELASTICDEV_ACCESS_GROUP")
 
     # Add substacks
-    stack.add_substack("ed:::ed_test::ec2_ubuntu_server")
-    stack.add_substack("ed:::ed_test::init_dockerhost_dns")
-    stack.add_substack("ed:::ed_test::init_dockerhost_ed_host")
+    stack.add_substack("williaumwu:::yo_repo::ec2_ubuntu_server")
+    stack.add_substack("williaumwu:::yo_repo::init_dockerhost_dns")
+    stack.add_substack("williaumwu:::yo_repo::init_dockerhost_ed_host")
 
     # init the stack namespace
     stack.init_variables()

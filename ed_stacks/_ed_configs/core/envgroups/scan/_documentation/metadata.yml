@@ -1,6 +1,6 @@
 label: create_env_groups
 desc: Scan and create EnvGroups
-version: 1.0.1
+version: 1.0.2
 categories: 
    - ed_scan
    - ed_saas
