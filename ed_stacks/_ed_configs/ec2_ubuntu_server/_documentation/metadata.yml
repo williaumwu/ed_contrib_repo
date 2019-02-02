@@ -1,0 +1,10 @@
+desc: Create Ec2 Ubuntu server
+release: 1.0.1
+categories: 
+   - aws
+   - cloud
+tags:
+   - aws
+   - cloud
+   - ubuntu
+   - ec2
