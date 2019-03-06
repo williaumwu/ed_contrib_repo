@@ -1,9 +1,0 @@
-desc: Create DNS entry for the dockerhost
-release: 1.0.1
-categories: 
-   - docker
-   - dns
-tags:
-   - docker
-   - dns
-   - init
