@@ -1,6 +1,0 @@
-name: eks_control
-ports: 0-65535
-config_env: public
-protocol: tcp
-sgs: 
-    - bastion
