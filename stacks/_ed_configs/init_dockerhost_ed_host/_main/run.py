@@ -11,7 +11,7 @@ def run(instructargs):
     # init the stack namespace
     stack.init_variables()
 
-    _groups = 'gary:::public::Docker/JiffyHost/BaseImage gary:::public::Docker/JiffyHost/Template'
+    _groups = 'elasticdev:::docker::Docker/JiffyHost/BaseImage elasticdev:::docker::Docker/JiffyHost/Template'
     groups = "{} {}".format(stack.access_group,_groups)
 
     # add hostgroups
