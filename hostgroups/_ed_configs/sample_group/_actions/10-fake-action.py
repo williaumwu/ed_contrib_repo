@@ -4,9 +4,8 @@ def default():
     env_vars = []
     shelloutconfigs = []
 
-    env_vars.append("docker/build")
-    env_vars.append("docker/application/flask")
-    shelloutconfigs.append('installation/ubuntu/16.04/install-docker')
+    shelloutconfigs.append('elasticdev:::ed_core::pre_scripts')
+    shelloutconfigs.append('elasticdev:::ed_core::post_scripts')
 
     task['method'] = 'shelloutconfig'
     task['metadata'] = {'env_vars': env_vars, 

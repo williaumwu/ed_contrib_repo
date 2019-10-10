@@ -1,6 +1,6 @@
-name: eks_control
+name: fake_security_group
 ports: 0-65535
 config_env: public
 protocol: tcp
 sgs: 
-    - bastion
+    - fake_sg
