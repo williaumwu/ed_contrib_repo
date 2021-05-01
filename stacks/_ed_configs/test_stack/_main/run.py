@@ -17,7 +17,7 @@ def run(stackargs):
 
     # add substacks
     stack.add_substack('williaumwu:::create_ec2_instances')
-    stack.add_substack('williaumwu:::install_nginx_to_servers')
+    #stack.add_substack('williaumwu:::install_nginx_to_servers')
 
     # Initialize 
     stack.init_variables()
@@ -42,6 +42,6 @@ def run(stackargs):
     inputargs = {"default_values":default_values}
     inputargs["automation_phase"] = "infrastructure"
     inputargs["human_description"] = 'Install Nginx on ec2 {}, num {}'.format(stack.server_name_base,stack.server_count)
-    stack.install_nginx_to_servers.insert(display=True,**inputargs)
+    stack.create_ec2_instances.insert(display=True,**inputargs)
 
     return stack.get_results()
