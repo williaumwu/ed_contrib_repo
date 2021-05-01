@@ -18,7 +18,7 @@ def run(stackargs):
     stack.parse.add_optional(key="stateful_id",default="_random")
 
     # Add execgroup
-    stack.add_execgroup("williaumwu:::terraform-ansible-example::ec2_instances")
+    stack.add_execgroup("williaumwwilliaumwu:::terraform-ansible-example::ec2_instances")
 
     # Initialize 
     stack.init_variables()
@@ -36,7 +36,6 @@ def run(stackargs):
     env_vars["TF_VAR_root_size"] = stack.root_size
     env_vars["STATEFUL_ID"] = stack.stateful_id
 
-    #env_vars["STATEFUL_ID"] = stack.stateful_id
     #env_vars["resource_type".upper()] = stack.resource_type
     #env_vars["RESOURCE_TAGS"] = "{},{},{}".format(stack.resource_type, stack.rds_name, stack.aws_default_region)
 
