@@ -59,3 +59,4 @@ def run(stackargs):
     stack.ec2_instances.insert(**inputargs)
 
     return stack.get_results()
+

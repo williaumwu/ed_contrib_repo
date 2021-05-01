@@ -19,7 +19,6 @@ def run(stackargs):
     stack.add_substack('williaumwu:::create_ec2_instances')
     #stack.add_substack('williaumwu:::install_nginx_to_servers')
 
-
     # Initialize 
     stack.init_variables()
     stack.init_substacks()
@@ -46,3 +45,4 @@ def run(stackargs):
     stack.create_ec2_instances.insert(display=True,**inputargs)
 
     return stack.get_results()
+
