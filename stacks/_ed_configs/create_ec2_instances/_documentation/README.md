@@ -1,6 +1,6 @@
 **Description**
 
-  Test stack for Terraform/Ansible integration
+  Create ec2 instances
 
 **Infrastructure**
 
@@ -21,31 +21,6 @@
 
 | argument           | description                            | var type |  default      |
 | ------------- | -------------------------------------- | -------- | ------------ |
-| docker_terraform_exec_env | docker container to execute terraform        | string   | elasticdev/terraform-run-env       |
-| docker_ansible_exec_env | docker container to execute ansible        | string   | elasticdev/ansible-run-env       |
+| docker_exec_env | docker container to execute terraform        | string   | elasticdev/terraform-run-env       |
 | aws_default_region | the default aws region         | string   | eu-west-1     |
-
-**Sample entry:**
-
-```
-build:
-  ci_example:
-    dependencies: 
-      - infrastructure::dockerhost
-      - infrastructure::ecr_repo
-    stack_name: elasticdev:::ec2_ci
-    arguments:
-      docker_host: docker_flask_sample
-      repo_url: https://github.com/bill12252016/flask_sample
-      repo_branch: master
-      triggered_branches:
-        - master
-
-```
-
-
-
-
-
-
 

@@ -1,7 +1,8 @@
-desc: Test stack for Terraform/Ansible integration
+desc: Create ec2 instances
 release: 0.0.1
 categories: 
-   - test
+   - ec2
+   - instances
    - dev
 tags:
    - getting_started
