@@ -18,7 +18,7 @@ def run(stackargs):
     stack.parse.add_optional(key="stateful_id",default="_random")
 
     # Add execgroup
-    stack.add_execgroup("williaumwwilliaumwu:::terraform-ansible-example::ec2_instances")
+    stack.add_execgroup("williaumwu:::terraform-ansible-example::ec2_instances")
 
     # Initialize 
     stack.init_variables()
