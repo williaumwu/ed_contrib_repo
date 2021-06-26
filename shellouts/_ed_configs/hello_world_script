@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import os
+
+layer = os.envion["EXECUTION_LAYER"]
+
+version = os.envion.get("HELLO_VERSION")
+if not version: version = 1
+
+store_file = os.envion.get("STORE_FILE")
+if not store_file: store_file = "/tmp/{}.txt".format(version)
+
+statement = "hello world {} at execution layer".format(version,layer)
+
+print("#"*32)
+print("")
+print(statement)
+print("")
+print("#"*32)
+
+with open(store_file,"w") as f:
+    f.write(statement)

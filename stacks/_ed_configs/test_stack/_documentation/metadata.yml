@@ -1,9 +1,0 @@
-desc: Test stack for Terraform/Ansible integration
-release: 0.0.1
-categories: 
-   - test
-   - dev
-tags:
-   - getting_started
-   - test
-   - dev
