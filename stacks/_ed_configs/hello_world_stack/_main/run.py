@@ -11,6 +11,7 @@ def run(stackargs):
 
     # Add shelloutconfigs
     stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script',"script")
+    stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script:2',"script")
 
     # Add hostgroups
     stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation", "hello_world_hostgroup")
