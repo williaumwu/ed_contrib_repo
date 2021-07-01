@@ -14,8 +14,8 @@ def run(stackargs):
     stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script:2',"script2")
 
     # Add hostgroups
-    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation", "hello_world_hostgroup")
-    #stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation", "hello_world_hostgroup")
+    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:3", "hello_world_hostgroup_3")
+    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:4", "hello_world_hostgroup_4")
 
     # init the stack namespace
     stack.init_variables()
@@ -31,6 +31,7 @@ def run(stackargs):
     stack.publish(_env_vars)
 
     # demo orchestration shellout execution
+    # version 1 of script
     orchestr_env_vars = {"SHOW_VERSION":int(stack.show_version) + 1 }
     orchestr_env_vars["ENV"] = "demo"
     inputargs = {"display":True}
@@ -38,6 +39,7 @@ def run(stackargs):
     inputargs["env_vars"] = json.dumps(orchestr_env_vars)
     stack.script.run(**inputargs)
 
+    # version 2 of script
     orchestr_env_vars = {"SHOW_VERSION":int(stack.show_version) + 2 }
     orchestr_env_vars["ENV"] = "demo"
     inputargs = {"display":True}
@@ -46,6 +48,10 @@ def run(stackargs):
     stack.script2.run(**inputargs)
 
     # execute orders on host
-    stack.add_groups_to_host(groups=stack.hello_world_hostgroup,hostname=stack.hostname)
+    # version 3 of hostgroup
+    stack.add_groups_to_host(groups=stack.hello_world_hostgroup_3,hostname=stack.hostname)
+
+    # version 4 of hostgroup
+    stack.add_groups_to_host(groups=stack.hello_world_hostgroup_4,hostname=stack.hostname)
 
     return stack.get_results()
