@@ -14,8 +14,8 @@ def run(stackargs):
     stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script:2',"script2")
 
     # Add hostgroups
-    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:3", "hello_world_hostgroup_3")
-    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegationn:4", "hello_world_hostgroup_4")
+    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:1", "hello_world_hostgroup_1")
+    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:2", "hello_world_hostgroup_2")
 
     # init the stack namespace
     stack.init_variables()
@@ -39,20 +39,19 @@ def run(stackargs):
     inputargs["env_vars"] = json.dumps(orchestr_env_vars)
     stack.script.run(**inputargs)
 
-    ## version 2 of script
-    #orchestr_env_vars = {"SHOW_VERSION":int(stack.show_version) + 2 }
-    #orchestr_env_vars["ENV"] = "demo"
-    #inputargs = {"display":True}
-    #inputargs["human_description"] = 'Demos Show Version +2 in the orchestration'
-    #inputargs["env_vars"] = json.dumps(orchestr_env_vars)
-    #stack.script2.run(**inputargs)
-
+    # version 2 of script
+    orchestr_env_vars = {"SHOW_VERSION":int(stack.show_version) + 2 }
+    orchestr_env_vars["ENV"] = "demo"
+    inputargs = {"display":True}
+    inputargs["human_description"] = 'Demos Show Version +2 in the orchestration'
+    inputargs["env_vars"] = json.dumps(orchestr_env_vars)
+    stack.script2.run(**inputargs)
 
     # execute orders on host
-    # version 3 of hostgroup
-    stack.add_groups_to_host(groups=stack.hello_world_hostgroup_3,hostname=stack.hostname)
+    # version 1 of hostgroup
+    stack.add_groups_to_host(groups=stack.hello_world_hostgroup_1,hostname=stack.hostname)
 
-    # version 4 of hostgroup
-    #stack.add_groups_to_host(groups=stack.hello_world_hostgroup_4,hostname=stack.hostname)
+    # version 2 of hostgroup
+    stack.add_groups_to_host(groups=stack.hello_world_hostgroup_2,hostname=stack.hostname)
 
     return stack.get_results()

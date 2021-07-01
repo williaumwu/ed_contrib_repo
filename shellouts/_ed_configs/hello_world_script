@@ -25,3 +25,4 @@ print("#"*32)
 
 with open(store_file,"w") as f:
     f.write(statement)
+
