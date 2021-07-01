@@ -15,7 +15,7 @@ def run(stackargs):
 
     # Add hostgroups
     stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:3", "hello_world_hostgroup_3")
-    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:4", "hello_world_hostgroup_4")
+    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group:4", "hello_world_hostgroup_4")
 
     # init the stack namespace
     stack.init_variables()
