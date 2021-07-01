@@ -13,7 +13,7 @@ def run(stackargs):
     stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script',"script")
 
     # Add hostgroups
-    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group", "latest_hostgroup")
+    #stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group", "latest_hostgroup")
 
     # init the stack namespace
     stack.init_variables()
@@ -44,6 +44,6 @@ def run(stackargs):
     stack.script.run(**inputargs)
 
     # execute orders on host
-    stack.add_groups_to_host(groups=stack.latest_hostgroup,hostname=stack.hostname)
+    #stack.add_groups_to_host(groups=stack.latest_hostgroup,hostname=stack.hostname)
 
     return stack.get_results()
