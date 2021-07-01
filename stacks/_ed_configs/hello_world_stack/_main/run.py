@@ -47,6 +47,7 @@ def run(stackargs):
     #inputargs["env_vars"] = json.dumps(orchestr_env_vars)
     #stack.script2.run(**inputargs)
 
+
     # execute orders on host
     # version 3 of hostgroup
     stack.add_groups_to_host(groups=stack.hello_world_hostgroup_3,hostname=stack.hostname)
