@@ -25,6 +25,7 @@ def run(stackargs):
     # add run environmental variables
     _env_vars = {"SHOW_VERSION":stack.show_version}
     _env_vars["ENV"] = "demo"
+    _env_vars["EXECUTION_LAYER"] = "delegation"
     stack.add_host_env_vars_to_run(_env_vars)
 
     # print out variables on saas dashboard/run
@@ -34,6 +35,7 @@ def run(stackargs):
     # version 1 of script
     orchestr_env_vars = {"SHOW_VERSION":int(stack.show_version) + 1 }
     orchestr_env_vars["ENV"] = "demo"
+    orchestr_env_vars["EXECUTION_LAYER"] = "orchestration"
     inputargs = {"display":True}
     inputargs["human_description"] = 'Demos Show Version +1 in the orchestration'
     inputargs["env_vars"] = json.dumps(orchestr_env_vars)
