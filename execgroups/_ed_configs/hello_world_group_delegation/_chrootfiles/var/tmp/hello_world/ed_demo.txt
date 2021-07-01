@@ -1,1 +1,2 @@
 ed_demo
+base version of hello_world_group_delegation
