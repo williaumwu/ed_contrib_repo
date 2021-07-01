@@ -41,7 +41,7 @@ def run(stackargs):
     inputargs = {"display":True}
     inputargs["human_description"] = 'Demos Show Version +2 in the orchestration'
     inputargs["env_vars"] = json.dumps(orchestr_env_vars)
-    stack.script.run(**inputargs)
+    #stack.script.run(**inputargs)
 
     # execute orders on host
     #stack.add_groups_to_host(groups=stack.latest_hostgroup,hostname=stack.hostname)
