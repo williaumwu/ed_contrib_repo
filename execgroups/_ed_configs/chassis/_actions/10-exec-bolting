@@ -3,7 +3,7 @@ def default():
     env_vars = []
     shelloutconfigs = []
 
-    shelloutconfigs.append('williaumwu:::demo-repo::bolting_wheels')
+    shelloutconfigs.append('williaumwu:::demo-repo::bolting')
 
     task = {}
     task['method'] = 'shelloutconfig'

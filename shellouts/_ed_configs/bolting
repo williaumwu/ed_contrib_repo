@@ -2,6 +2,6 @@
 
 print("#"*32)
 print("")
-print("bolting wheels")
+print("bolting ...")
 print("")
 print("#"*32)
