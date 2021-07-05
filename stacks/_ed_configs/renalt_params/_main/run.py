@@ -1,11 +1,16 @@
 def run(stackargs):
 
+    import json
+
     # instantiate stack
     stack = newStack(stackargs)
 
     # Add default variables
     stack.parse.add_required(key="hostname")
     stack.parse.add_required(key="wheel_color",default="green")
+
+    # Add shelloutconfigs
+    stack.add_shelloutconfig('williaumwu:::demo-repo::show_model')
 
     # Add hostgroups
     stack.add_hostgroups("williaumwu:::demo-repo::wheel_green", "wheel_green")
@@ -19,6 +24,15 @@ def run(stackargs):
     stack.init_hostgroups()
     stack.init_shelloutconfigs()
 
+    orchestr_env_vars = {"race_team":int(stack.team) + 1 }
+    orchestr_env_vars["ENV"] = "demo"
+    orchestr_env_vars["EXECUTION_LAYER"] = "orchestration"
+    inputargs = {"display":True}
+    inputargs["human_description"] = 'Demos Show Version +1 in the orchestration'
+    inputargs["env_vars"] = json.dumps(orchestr_env_vars)
+    stack.script.run(**inputargs)
+
+    # version 2 of script
     # print out variables on saas dashboard/run
     _publish_vars = {"wheel_color":stack.wheel_color}
     _publish_vars["chassis"] = stack.chassis

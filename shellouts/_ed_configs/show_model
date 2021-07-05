@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import os
+
+race_team = os.environ.get("race_team")
+
+if race_team in ["None",None,"none"]:
+    print("race_team is not set in environment variables")
+    exit(8)
+
+print("#"*32)
+print("")
+print("show race name {} ...".format(race_team))
+print("")
+print("#"*32)
