@@ -27,12 +27,12 @@ def run(stackargs):
 
     inputargs = {"display":True}
     inputargs["env_vars"] = json.dumps(env_vars)
-    inputargs["human_description"] = "Creating platform with wheels {}".format(stack.wheels.groups)
+    inputargs["human_description"] = "Creating platform with wheels {}".format(stack.wheels.asset)
     stack.wheels.insert(**inputargs)
 
     inputargs = {"display":True}
     inputargs["env_vars"] = json.dumps(env_vars)
-    inputargs["human_description"] = "Creating platform with core {}".format(stack.core.groups)
+    inputargs["human_description"] = "Creating platform with core {}".format(stack.core.asset)
     stack.core.insert(**inputargs)
 
     return stack.get_results()
