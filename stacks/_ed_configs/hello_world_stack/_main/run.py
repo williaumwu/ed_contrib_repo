@@ -14,8 +14,9 @@ def run(stackargs):
     stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script:2',"script2")
 
     # Add hostgroups
-    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:1", "hello_world_hostgroup_1")
-    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:2", "hello_world_hostgroup_2")
+    stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation", "hello_world_hostgroup_1")
+    #stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:1", "hello_world_hostgroup_1")
+    #stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation:2", "hello_world_hostgroup_2")
 
     # init the stack namespace
     stack.init_variables()
@@ -54,6 +55,6 @@ def run(stackargs):
     stack.add_groups_to_host(groups=stack.hello_world_hostgroup_1,hostname=stack.hostname)
 
     # version 2 of hostgroup
-    stack.add_groups_to_host(groups=stack.hello_world_hostgroup_2,hostname=stack.hostname)
+    #stack.add_groups_to_host(groups=stack.hello_world_hostgroup_2,hostname=stack.hostname)
 
     return stack.get_results()
