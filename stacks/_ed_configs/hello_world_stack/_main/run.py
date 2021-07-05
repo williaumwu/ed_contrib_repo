@@ -11,7 +11,7 @@ def run(stackargs):
 
     # Add shelloutconfigs
     stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script',"script")
-    stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script:2',"script2")
+    #stack.add_shelloutconfig('williaumwu:::demo-repo::hello_world_script:2',"script2")
 
     # Add hostgroups
     stack.add_hostgroups("williaumwu:::demo-repo::hello_world_group_delegation", "hello_world_hostgroup_1")
@@ -43,12 +43,12 @@ def run(stackargs):
     stack.script.run(**inputargs)
 
     # version 2 of script
-    orchestr_env_vars = {"SHOW_VERSION":int(stack.show_version) + 2 }
-    orchestr_env_vars["ENV"] = "demo"
-    inputargs = {"display":True}
-    inputargs["human_description"] = 'Demos Show Version +2 in the orchestration'
-    inputargs["env_vars"] = json.dumps(orchestr_env_vars)
-    stack.script2.run(**inputargs)
+    #orchestr_env_vars = {"SHOW_VERSION":int(stack.show_version) + 2 }
+    #orchestr_env_vars["ENV"] = "demo"
+    #inputargs = {"display":True}
+    #inputargs["human_description"] = 'Demos Show Version +2 in the orchestration'
+    #inputargs["env_vars"] = json.dumps(orchestr_env_vars)
+    #stack.script2.run(**inputargs)
 
     # execute orders on host
     # version 1 of hostgroup
