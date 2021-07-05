@@ -5,9 +5,11 @@ def run(stackargs):
     # instantiate stack
     stack = newStack(stackargs)
 
+    # Add variables
+    stack.parse.add_optional(key="build_dir",default="_random")
+
     # Add shelloutconfigs
     #stack.add_shelloutconfig('williaumwu:::demo-repo::show_model')
-    stack.parse.add_optional(key="build_dir",default="_random")
 
     # Add hostgroups
     stack.add_execgroups("williaumwu:::demo-repo::gunmetal_wheels", "wheels")
