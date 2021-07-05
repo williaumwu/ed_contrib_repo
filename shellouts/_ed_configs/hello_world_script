@@ -14,15 +14,9 @@ statement = "hello world {} at execution layer".format(version,layer)
 
 print("#"*32)
 print("")
-print("hello world script another version")
-print("hello world script another version")
-print("hello world script another version")
-print("hello world script another version")
-print("")
 print(statement)
 print("")
 print("#"*32)
 
 with open(store_file,"w") as f:
     f.write(statement)
-
