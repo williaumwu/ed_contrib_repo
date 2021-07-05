@@ -12,8 +12,8 @@ def run(stackargs):
     #stack.add_shelloutconfig('williaumwu:::demo-repo::show_model')
 
     # Add hostgroups
-    stack.add_execgroups("williaumwu:::demo-repo::gunmetal_wheels", "wheels")
-    stack.add_execgroups("williaumwu:::demo-repo::ferrari", "core")
+    stack.add_execgroup("williaumwu:::demo-repo::gunmetal_wheels", "wheels")
+    stack.add_execgroup("williaumwu:::demo-repo::ferrari", "core")
 
     # init the stack namespace
     stack.init_variables()
