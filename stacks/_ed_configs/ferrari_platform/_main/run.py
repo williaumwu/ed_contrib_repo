@@ -13,7 +13,7 @@ def run(stackargs):
 
     # Add hostgroups
     stack.add_execgroup("williaumwu:::demo-repo::gunmetal_wheels", "wheels")
-    stack.add_execgroup("williaumwu:::demo-repo::ferrari", "core")
+    stack.add_execgroup("williaumwu:::demo-repo::ferrari_core", "core")
 
     # init the stack namespace
     stack.init_variables()
