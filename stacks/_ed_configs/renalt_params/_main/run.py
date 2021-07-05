@@ -6,7 +6,9 @@ def run(stackargs):
     stack = newStack(stackargs)
 
     # Add default variables
-    stack.parse.add_required(key="hostname")
+    ##################AAAAAAAAAAAAAAAAA
+    #stack.parse.add_required(key="hostname")
+    ##################AAAAAAAAAAAAAAAAA
     stack.parse.add_required(key="wheel_color",default="green")
 
     # Add shelloutconfigs
@@ -47,9 +49,10 @@ def run(stackargs):
 
     stack.logger.debug("Wheel color is {}".format(_wheel))
 
-    _groups = stack.chassis+" "+_wheel+" "+stack.engine+" "+stack.dashboard
-
+    ##################AAAAAAAAAAAAAAAAA
     # version 1 of hostgroup
-    stack.add_groups_to_host(groups=_groups,hostname=stack.hostname)
+    #_groups = stack.chassis+" "+_wheel+" "+stack.engine+" "+stack.dashboard
+    #stack.add_groups_to_host(groups=_groups,hostname=stack.hostname)
+    ##################AAAAAAAAAAAAAAAAA
 
     return stack.get_results()
