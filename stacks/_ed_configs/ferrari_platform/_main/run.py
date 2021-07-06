@@ -43,7 +43,7 @@ def run(stackargs):
         env_vars = {"F1_DIR":stack.group_dest_dir}
         inputargs = {"display":True}
         inputargs["human_description"] = 'Shows the F1 configuration with {}'.format(stack.show_configuration.name)
-        inputargs["env_vars"] = json.dumps(stack.env_vars)
+        inputargs["env_vars"] = json.dumps(env_vars)
         stack.show_configuration.execute(**inputargs)
 
     return stack.get_results()
