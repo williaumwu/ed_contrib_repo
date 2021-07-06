@@ -15,6 +15,12 @@ os.chdir(f1_dir)
 
 files = [f for f in os.listdir(os.curdir) if os.path.isfile(f)]
 
+print(files)
+print(files)
+print(files)
+print(files)
+print(files)
+
 for introspection_file in introspection_files:
 
     if introspection_file not in files:
