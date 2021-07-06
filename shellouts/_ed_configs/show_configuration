@@ -11,12 +11,12 @@ introspection_files = [ "chassis",
                         "steering_wheel",
                         "dashboard"]
 
-os.chdir(f1_dir)
+components_dir = os.path.join(f1_dir,"var","tmp","share")
 
-print(f1_dir)
-print(f1_dir)
-print(f1_dir)
-print(f1_dir)
+print(components_dir)
+print(components_dir)
+print(components_dir)
+print(components_dir)
 os.system("find .")
 
 files = [f for f in os.listdir(os.curdir) if os.path.isfile(f)]
@@ -30,7 +30,7 @@ print(files)
 for introspection_file in introspection_files:
 
     if introspection_file not in files:
-        print("Could not find a component {} to show".format(introspection_file))
+        print('Could not find a component "{}" to show'.format(introspection_file))
         continue
 
     contents = open(introspection_file,'r').read()
