@@ -17,7 +17,7 @@ def run(stackargs):
     stack.add_execgroup("williaumwu:::demo-repo::italian_controls", "controls")
 
     # Add stack
-    stack.add_substack("elasticdev:::ferrari_platform")
+    stack.add_substack("williaumwu:::ferrari_platform")
 
     # init the stack namespace
     stack.init_variables()
