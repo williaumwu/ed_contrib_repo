@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+
+import os
+
+f1_dir = os.environ.get("F1_DIR","/var/tmp/share")
+
+introspection_files = [ "chassis",
+                        "engine",
+                        "rims",
+                        "tires",
+                        "steering_wheel",
+                        "dashboard"]
+
+os.chdir(f1_dir)
+
+files = [f for f in os.listdir(os.curdir) if os.path.isfile(f)]
+
+for introspection_file in introspection_files:
+
+    if introspection_file not in files:
+        print("Could not find a component {} to show".format(introspection_file))
+        continue
+
+    contents = open(introspection_file,'r').read()
+
+    print("#"*32)
+    print("####### {} ######".format(introspection_file))
+    print("")
+    print(contents)
+    print("")
+    print("#"*32)
