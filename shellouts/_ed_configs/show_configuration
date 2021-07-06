@@ -11,17 +11,14 @@ introspection_files = [ "chassis",
                         "steering_wheel",
                         "dashboard"]
 
-components_dir = os.path.join(f1_dir,"var","tmp","share")
-
-print(components_dir)
-print(components_dir)
-print(components_dir)
-print(components_dir)
-os.system("find .")
+os.chdir(f1_dir)
 
 files = [f for f in os.listdir(os.curdir) if os.path.isfile(f)]
 
-print(files)
+print(f1_dir)
+print(f1_dir)
+print(f1_dir)
+print(f1_dir)
 print(files)
 print(files)
 print(files)

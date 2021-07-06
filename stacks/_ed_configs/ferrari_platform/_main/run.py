@@ -1,5 +1,6 @@
 def run(stackargs):
 
+    import os
     import json
 
     # instantiate stack
@@ -40,7 +41,7 @@ def run(stackargs):
     # if this is the parent or top level of the entry point, then we print out
     if stack.entry_point:
 
-        env_vars = {"F1_DIR":stack.group_dest_dir}
+        env_vars = {"F1_DIR":os.path.join(stack.group_dest_dir,"var","tmp","demo")}
         inputargs = {"display":True}
         inputargs["human_description"] = 'Shows the F1 configuration with {}'.format(stack.show_configuration.name)
         inputargs["env_vars"] = json.dumps(env_vars)
