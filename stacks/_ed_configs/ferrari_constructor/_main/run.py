@@ -23,6 +23,7 @@ def run(stackargs):
     stack.init_variables()
     stack.init_execgroups()
     stack.init_shelloutconfigs()
+    stack.init_substacks()
 
     stack.set_variable("group_dest_dir","/var/tmp/share/{}".format(stack.build_dir))
 
