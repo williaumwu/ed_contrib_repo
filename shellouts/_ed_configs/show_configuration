@@ -24,7 +24,7 @@ for introspection_file in introspection_files:
     contents = open(introspection_file,'r').read()
 
     print("#"*32)
-    print("----- {} -----".format(introspection_file))
+    print("+++++ {} +++++".format(introspection_file))
     print("")
     print(contents)
     print("")
