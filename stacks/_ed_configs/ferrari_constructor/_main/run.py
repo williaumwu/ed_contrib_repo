@@ -17,7 +17,7 @@ def run(stackargs):
     stack.add_execgroup("williaumwu:::demo-repo::italian_controls", "controls")
 
     # Add stack
-    stack.add_substack("bill12252016:::ashton_martin_platform")
+    stack.add_substack("bill12252016:::ashton_martin_platform","platform")
 
     # init the stack namespace
     stack.init_variables()
@@ -34,8 +34,8 @@ def run(stackargs):
     inputargs = {"default_values":default_values,
                  "overide_values":overide_values}
 
-    inputargs["human_description"] = 'Executing substack "{}"'.format(stack.ferrari_platform.name)
-    stack.ferrari_platform.insert(display=True,**inputargs)
+    inputargs["human_description"] = 'Executing substack "{}"'.format(stack.platform.name)
+    stack.platform.insert(display=True,**inputargs)
 
     # Add controls 
     inputargs = {"display":True}
